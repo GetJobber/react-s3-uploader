@@ -109,11 +109,32 @@ var ReactS3Uploader = createReactClass({
         if ( this.props.autoUpload ) {
             additional.onChange = this.uploadFile;
         }
-        
+
         var temporaryProps = objectAssign({}, this.props, additional);
         var inputProps = {};
 
-        var invalidProps = Object.keys(ReactS3Uploader.propTypes);
+        // Below line doesn't work on production, only locally. Workaround is below.
+        // var invalidProps = Object.keys(ReactS3Uploader.propTypes);
+        var invalidProps = [
+            "signingUrl",
+            "getSignedUrl",
+            "preprocess",
+            "onSignedUrl",
+            "onProgress",
+            "onFinish",
+            "onError",
+            "signingUrlMethod",
+            "signingUrlHeaders",
+            "signingUrlQueryParams",
+            "signingUrlWithCredentials",
+            "uploadRequestHeaders",
+            "contentDisposition",
+            "server",
+            "scrubFilename",
+            "s3path",
+            "inputRef",
+            "autoUpload",
+        ]
 
         for(var key in temporaryProps) {
             if(temporaryProps.hasOwnProperty(key) && invalidProps.indexOf(key) === -1) {
