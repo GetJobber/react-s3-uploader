@@ -3,7 +3,8 @@
   "version": "4.9.5",
   "description": "React component that renders a file input and automatically uploads to an S3 bucket",
   "main": "index.js",
-  "scripts": {
+	"types": "index.d.ts",
+	"scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 	"publishConfig": {
