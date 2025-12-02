@@ -1,6 +1,6 @@
 {
   "name": "@getjobber/react-s3-uploader",
-  "version": "4.9.5",
+  "version": "4.9.6",
   "description": "React component that renders a file input and automatically uploads to an S3 bucket",
   "main": "index.js",
   "types": "index.d.ts",
